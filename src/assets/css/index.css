@@ -1,3 +1,4 @@
+/* reset */
 *{
   margin: 0;
   padding: 0;
@@ -8,9 +9,101 @@
   font-family: 'Open sans', sans-serif;
 }
 
+/* utilis */
+
 img{width: 100%;}
 
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+/* header */
 .logo-header{
   width: 80px;
   min-width: 80px;
+  margin: 0;
+}
+
+header nav {
+  line-height: 80px;
+}
+header a{
+  border-bottom: 3px solid transparent;
+  padding: 20px 0;
+}
+
+header a.active, header a:hover {
+  color: #0282f9;
+  border-color: #0282f9;
+}
+
+
+
+/* footer */
+footer{
+  position: relative;
+}
+
+.bg-blue{
+  background-color: #0282f9;
+  position: relative;
+  z-index: 2;
+}
+
+.shop-icons{
+  width: 40px;
+}
+
+.bg-footer-links{
+  background-image: url('../img/footer-bg.jpg');
+  min-height: 400px;
+}
+
+.footer-links-container{
+  z-index: 1;
+}
+
+.footer-links-container li > a{
+  color: #7d7d7d;
+  font-size: 14px;
+}
+
+.logo-footer{
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  z-index: 0;
+}
+
+.bg-dark-custom{
+  background-color: #303030;
+}
+
+.newsletter-and-socials{
+  position: relative;
+  z-index: 2;
+}
+.socials{
+  display: flex;
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.socials p{
+  color: #0282f9;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.signup-btn{
+  font-size: 20px;
+  border: 2px solid #0282f9;
+  padding: 5px 10px;
 }
