@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  font-family: 'Open sans', sans-serif;
+}
+
+img{width: 100%;}
+
+.logo-header{
+  width: 80px;
+  min-width: 80px;
+}
