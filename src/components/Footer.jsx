@@ -11,12 +11,108 @@ import pinterest from '../assets/img/footer-pinterest.png'
 import periscope from '../assets/img/footer-periscope.png'
 
 export default function Footer() {
+
+    const menuDcAndSites = [
+        {
+            id: 1,
+            title: 'DC',
+            links: [
+                {
+                    id: 1,
+                    url: '#',
+                    text: 'Terms Of Use'
+                },
+                {
+                    id: 2,
+                    url: '#',
+                    text: 'Privacy policy (New)'
+                },
+                {
+                    id: 3,
+                    url: '#',
+                    text: 'Ad Choices'
+                },
+                {
+                    id: 4,
+                    url: '#',
+                    text: 'Advertising'
+                },
+                {
+                    id: 5,
+                    url: '#',
+                    text: 'Jobs'
+                },
+                {
+                    id: 6,
+                    url: '#',
+                    text: 'Subscriptions'
+                },
+                {
+                    id: 7,
+                    url: '#',
+                    text: 'Talent Workshops'
+                },
+                {
+                    id: 8,
+                    url: '#',
+                    text: 'CPSC Certificates'
+                },
+                {
+                    id: 9,
+                    url: '#',
+                    text: 'Ratings'
+                },
+                {
+                    id: 10,
+                    url: '#',
+                    text: 'Shop Help'
+                },
+                {
+                    id: 11,
+                    url: '#',
+                    text: 'Contact Us'
+                }
+            ]
+        },
+        {
+            id: 2,
+            title: 'SITES',
+            links: [
+                {
+                    id: 1,
+                    url: '#',
+                    text: 'DC'
+                },
+                {
+                    id: 2,
+                    url: '#',
+                    text: 'MAD Magazine'
+                },
+                {
+                    id: 3,
+                    url: '#',
+                    text: 'DC Kids'
+                },
+                {
+                    id: 4,
+                    url: '#',
+                    text: 'DC Universe'
+                },
+                {
+                    id: 5,
+                    url: '#',
+                    text: 'DC Power Visa'
+                }
+            ]
+        }
+    ]
+
     return (
         <>
-            <footer>
-                <div className="bg-blue text-white">
+            <footer className='position-relative'>
+                <div className="bg-blue text-white py-4">
                     <section className="container py-3" id="shops">
-                        <ul className='d-flex align-items-center justify-content-around'>
+                        <ul className='d-flex align-items-center justify-content-around m-0'>
                             <li className=''><a href="#"><img src={digitalComics} alt="Digital comics logo" className='shop-icons' />  DIGITAL COMICS</a></li>
                             <li className=''><a href="#"><img src={dcMerchandise} alt="Dc merchandise logo" className='shop-icons' />  DC MERCHANDISE</a></li>
                             <li className=''><a href="#"><img src={dcSubscription} alt="subscription logo" className='shop-icons' />  SUBSCRIPTION</a></li>
@@ -26,13 +122,13 @@ export default function Footer() {
                     </section>
                 </div>
                 <div className='bg-footer-links text-white'>
-                    <div className="container d-flex justify-between">
+                    <div className="container d-flex justify-content-between">
                         <div className='pt-5 pb-4 footer-links-container'>
                             <div className="row">
                                 <div className="col">
                                     <div className="row row-cols-1">
                                         <div className="col">
-                                            <p className='fw-bold mb-2'>DC COMICS</p>
+                                            <h3 className='fs-4'>DC COMICS</h3>
                                             <ul>
                                                 <li><a href="#">Characters</a></li>
                                                 <li><a href="#">Comics</a></li>
@@ -44,7 +140,7 @@ export default function Footer() {
                                             </ul>
                                         </div>
                                         <div className="col">
-                                            <p className='fw-bold mt-2 mb-2'>SHOP</p>
+                                            <h3 className='fs-4 mt-2 mb-2'>SHOP</h3>
                                             <ul>
                                                 <li><a href="#">Shop DC</a></li>
                                                 <li><a href="#">Shop Dc Collectibles</a></li>
@@ -52,36 +148,22 @@ export default function Footer() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col">
-                                    <p className='fw-bold mb-2'>DC</p>
-                                    <ul>
-                                        <li><a href="#">Terms Of Use</a></li>
-                                        <li><a href="#">Privacy Policy (New)</a></li>
-                                        <li><a href="#">Ad Choises</a></li>
-                                        <li><a href="#">Advertising</a></li>
-                                        <li><a href="#">Jobs</a></li>
-                                        <li><a href="#">Subscriptions</a></li>
-                                        <li><a href="#">Talent Workshops</a></li>
-                                        <li><a href="#">CPSC Certificates</a></li>
-                                        <li><a href="#">Ratings</a></li>
-                                        <li><a href="#">Shop Help</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                                <div className="col">
-                                    <p className='fw-bold mb-2'>SITES</p>
-                                    <ul>
-                                        <li><a href="#">DC</a></li>
-                                        <li><a href="#">MAD Magazine</a></li>
-                                        <li><a href="#">DC Kids</a></li>
-                                        <li><a href="#">DC Universe</a></li>
-                                        <li><a href="#">DC Power Visa</a></li>
-                                    </ul>
-                                </div>
+                                {
+                                    menuDcAndSites.map((menu) => (
+                                        <div key={menu.id} className="col">
+                                            <h3 className="fs-4">{menu.title}</h3>
+                                            <ul>
+                                                {menu.links.map((link) => (
+                                                    <li key={link.id}><a href={link.url}>{link.text}</a></li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))
+                                }
                             </div>
                         </div>
-                        <figure className='logo-footer'>
-                            <img src={dcLogoForFooter} alt="dc-logo" />
+                        <figure className='logo-footer-container'>
+                            <img src={dcLogoForFooter} alt="dc-logo" className='img-fluid' />
                         </figure>
                     </div>
                 </div>
@@ -91,7 +173,7 @@ export default function Footer() {
                             <a href="#" className='text-white signup-btn'>SIGN-UP NOW!</a>
                         </div>
                         <div className='socials'>
-                            <p>FOLLOW US</p>
+                            <h2 className='fw-bold fs-4 m-0'>FOLLOW US</h2>
                             <a href="#"><img src={facebook} alt="facebook" /></a>
                             <a href="#"><img src={twitter} alt="twitter" /></a>
                             <a href="#"><img src={youTube} alt="you tube" /></a>
