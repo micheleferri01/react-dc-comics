@@ -53,18 +53,23 @@ header a.active, header a:hover {
   max-height: 350px;
 }
 
+.my-badge{
+  position: absolute;
+  top: -50px;
+  left: 0;
+}
+
 .bg-comics{
   background-color: #1c1c1c;
 }
 
 .card-image{
-  max-height: 180px;
+  height: 180px;
   overflow: hidden;
 }
 
 
 /* footer */
-
 .bg-blue{
   background-color: #0282f9;
 }
@@ -78,7 +83,6 @@ header a.active, header a:hover {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  min-height: 300px;
 }
 
 .footer-links-container li > a{
@@ -96,7 +100,10 @@ header a.active, header a:hover {
 }
 
 .newsletter-and-socials{
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .socials{
@@ -104,11 +111,11 @@ header a.active, header a:hover {
   gap: 20px;
 }
 
-.socials p{
+.socials h2{
   color: #0282f9;
-  font-size: 20px;
+  /* font-size: 20px;
   font-weight: 700;
-  margin: 0;
+  margin: 0; */
 }
 
 .signup-btn{

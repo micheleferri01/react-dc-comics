@@ -162,7 +162,8 @@ export default function Main() {
                     <img src={jumbotronPic} alt="jumbotron" />
                 </div>
                 <div className="bg-comics text-white py-5">
-                    <div className='container'>
+                    <div className='container position-relative'>
+                        <h1 className='bg-blue fs-3 px-3 py-1 my-badge'>CURRENT SERIES</h1>
                         <div className='row g-3'>
                             {comics.map((comic) => (
                                 <div key={comic.id} className="col-12 col-sm-6 col-md-3 col-lg-2">
@@ -170,7 +171,7 @@ export default function Main() {
                                         <div className='card-image'>
                                             <img src={comic.thumb} alt={comic.title} className='img-fluid' />
                                         </div>
-                                        <h1 className='fs-5 pt-2'>{comic.series}</h1>
+                                        <h1 className='fs-6 pt-2'>{comic.series}</h1>
                                     </div>
                                 </div>
                             ))}
