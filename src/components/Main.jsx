@@ -161,7 +161,7 @@ export default function Main() {
                 <div className='ow-hidden jumbo'>
                     <img src={jumbotronPic} alt="jumbotron" />
                 </div>
-                <div className="bg-comics text-white py-5">
+                <div className="bg-comics text-white pt-5 pb-3">
                     <div className='container position-relative'>
                         <h1 className='bg-blue fs-3 px-3 py-1 my-badge'>CURRENT SERIES</h1>
                         <div className='row g-3'>
@@ -176,6 +176,7 @@ export default function Main() {
                                 </div>
                             ))}
                         </div>
+                        <button className='bg-blue text-white py-2 px-5 btn-load-more'>LOAD MORE</button>
                     </div>
                 </div>
 
