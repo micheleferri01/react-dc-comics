@@ -224,6 +224,7 @@ export default function App() {
 
   const menusFooter = [
     {
+      id: 1,
       title: 'DC COMICS',
       links: [
         {

@@ -33,7 +33,9 @@ export default function Footer({list}) {
                         < div className='pt-4 pb-2 footer-links-container'>
 
                             {
-                                list.map((menu) => (
+                                list.map((menu) => {
+                                    console.log(menu)
+                                    return(
                                     <div key={menu.id}>
                                         <h3 className="fs-4">{menu.title}</h3>
                                         <ul>
@@ -42,7 +44,7 @@ export default function Footer({list}) {
                                             ))}
                                         </ul>
                                     </div>
-                                ))
+                                )})
                             }
 
                         </div>
