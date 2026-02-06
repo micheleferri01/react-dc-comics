@@ -1,4 +1,5 @@
 import jumbotronPic from '../assets/img/jumbotron.jpg'
+import ComicCard from './comics-cards/comic-card.jsx'
 export default function Main() {
     const comics = [
         {
@@ -166,14 +167,7 @@ export default function Main() {
                         <h1 className='bg-blue fs-3 fw-bold px-3 py-1 my-badge'>CURRENT SERIES</h1>
                         <div className='row g-3'>
                             {comics.map((comic) => (
-                                <div key={comic.id} className="col-6 col-md-4 col-lg-3 col-xl-2">
-                                    <div className='h-100 p-2'>
-                                        <div className='card-image'>
-                                            <img src={comic.thumb} alt={comic.title} className='img-fluid' />
-                                        </div>
-                                        <h1 className='fs-6 pt-2'>{comic.series}</h1>
-                                    </div>
-                                </div>
+                                <ComicCard card={comic}/>
                             ))}
                         </div>
                         <button className='bg-blue text-white py-2 px-5 btn-load-more'>LOAD MORE</button>
