@@ -161,12 +161,12 @@ export default function Main() {
                 <div className='ow-hidden jumbo'>
                     <img src={jumbotronPic} alt="jumbotron" />
                 </div>
-                <div className="bg-comics text-white pt-5 pb-3">
+                <div className="bg-comics text-white pt-5 pb-3 position-relative">
                     <div className='container position-relative'>
-                        <h1 className='bg-blue fs-3 px-3 py-1 my-badge'>CURRENT SERIES</h1>
+                        <h1 className='bg-blue fs-3 fw-bold px-3 py-1 my-badge'>CURRENT SERIES</h1>
                         <div className='row g-3'>
                             {comics.map((comic) => (
-                                <div key={comic.id} className="col-12 col-sm-6 col-md-3 col-lg-2">
+                                <div key={comic.id} className="col-6 col-md-4 col-lg-3 col-xl-2">
                                     <div className='h-100 p-2'>
                                         <div className='card-image'>
                                             <img src={comic.thumb} alt={comic.title} className='img-fluid' />

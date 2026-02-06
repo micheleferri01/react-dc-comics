@@ -110,24 +110,24 @@ export default function Footer() {
     return (
         <>
             <footer className='position-relative'>
-                <div className="bg-blue text-white py-4">
+                <div className="bg-blue text-white py-4 position-relative">
                     <section className="container py-3" id="shops">
-                        <ul className='d-flex align-items-center justify-content-around m-0'>
-                            <li className=''><a href="#"><img src={digitalComics} alt="Digital comics logo" className='shop-icons' />  DIGITAL COMICS</a></li>
-                            <li className=''><a href="#"><img src={dcMerchandise} alt="Dc merchandise logo" className='shop-icons' />  DC MERCHANDISE</a></li>
-                            <li className=''><a href="#"><img src={dcSubscription} alt="subscription logo" className='shop-icons' />  SUBSCRIPTION</a></li>
-                            <li className=''><a href="#"><img src={dcShopLocator} alt="Comic shop locator logo" className='shop-icons' />  COMIC SHOP LOCATOR</a></li>
-                            <li className=''><a href="#"><img src={dcPowerVisa} alt="Dc power visa logo" className='shop-icons' />  DC POWER VISA</a></li>
+                        <ul className='row align-items-center m-0'>
+                            <li className='col'><a href="#"><img src={digitalComics} alt="Digital comics logo" className='shop-icons' />  DIGITAL COMICS</a></li>
+                            <li className='col'><a href="#"><img src={dcMerchandise} alt="Dc merchandise logo" className='shop-icons' />  DC MERCHANDISE</a></li>
+                            <li className='col'><a href="#"><img src={dcSubscription} alt="subscription logo" className='shop-icons' />  SUBSCRIPTION</a></li>
+                            <li className='col'><a href="#"><img src={dcShopLocator} alt="Comic shop locator logo" className='shop-icons' />  COMIC SHOP LOCATOR</a></li>
+                            <li className='col'><a href="#"><img src={dcPowerVisa} alt="Dc power visa logo" className='shop-icons' />  DC POWER VISA</a></li>
                         </ul>
                     </section>
                 </div>
                 <div className='bg-footer-links text-white'>
                     <div className="container d-flex justify-content-between">
-                        <div className='pt-5 pb-4 footer-links-container'>
+                        <div className='pt-4 pb-2 footer-links-container'>
                             <div className="row">
-                                <div className="col">
-                                    <div className="row row-cols-1">
-                                        <div className="col">
+                                <div className="col-12 col-lg-4">
+                                    <div className="row">
+                                        <div className="col-12">
                                             <h3 className='fs-4'>DC COMICS</h3>
                                             <ul>
                                                 <li><a href="#">Characters</a></li>
@@ -139,7 +139,7 @@ export default function Footer() {
                                                 <li><a href="#">News</a></li>
                                             </ul>
                                         </div>
-                                        <div className="col">
+                                        <div className="col-12">
                                             <h3 className='fs-4 mt-2 mb-2'>SHOP</h3>
                                             <ul>
                                                 <li><a href="#">Shop DC</a></li>
@@ -150,7 +150,7 @@ export default function Footer() {
                                 </div>
                                 {
                                     menuDcAndSites.map((menu) => (
-                                        <div key={menu.id} className="col">
+                                        <div key={menu.id} className="col-12 col-lg-4">
                                             <h3 className="fs-4">{menu.title}</h3>
                                             <ul>
                                                 {menu.links.map((link) => (
@@ -162,9 +162,7 @@ export default function Footer() {
                                 }
                             </div>
                         </div>
-                        <figure className='logo-footer-container'>
-                            <img src={dcLogoForFooter} alt="dc-logo" className='img-fluid' />
-                        </figure>
+                        <img src={dcLogoForFooter} alt="dc-logo" className='logo-footer' />
                     </div>
                 </div>
                 <div className='bg-dark-custom py-5 newsletter-and-socials'>
@@ -174,11 +172,11 @@ export default function Footer() {
                         </div>
                         <div className='socials'>
                             <h2 className='fw-bold fs-4 m-0'>FOLLOW US</h2>
-                            <a href="#"><img src={facebook} alt="facebook" /></a>
-                            <a href="#"><img src={twitter} alt="twitter" /></a>
-                            <a href="#"><img src={youTube} alt="you tube" /></a>
-                            <a href="#"><img src={pinterest} alt="pinterest" /></a>
-                            <a href="#"><img src={periscope} alt="periscope" /></a>
+                            <a href="#"><img src={facebook} alt="facebook" className='social'/></a>
+                            <a href="#"><img src={twitter} alt="twitter" className='social'/></a>
+                            <a href="#"><img src={youTube} alt="you tube" className='social' /></a>
+                            <a href="#"><img src={pinterest} alt="pinterest" className='social'/></a>
+                            <a href="#"><img src={periscope} alt="periscope" className='social'/></a>
                         </div>
                     </div>
                 </div>

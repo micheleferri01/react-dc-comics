@@ -38,6 +38,7 @@ ul{
 header nav {
   line-height: 80px;
 }
+
 header a{
   border-bottom: 3px solid transparent;
   padding: 20px 0;
@@ -64,7 +65,7 @@ header a.active, header a:hover {
 }
 
 .card-image{
-  height: 180px;
+  height: 110px;
   overflow: hidden;
 }
 
@@ -78,6 +79,7 @@ header a.active, header a:hover {
 /* footer */
 .bg-blue{
   background-color: #0282f9;
+  z-index: 2;
 }
 
 .shop-icons{
@@ -88,7 +90,11 @@ header a.active, header a:hover {
   background-image: url('../img/footer-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+}
+
+.footer-links-container{
+  position: relative;
+  z-index: 1;
 }
 
 .footer-links-container li > a{
@@ -96,9 +102,10 @@ header a.active, header a:hover {
   font-size: 14px;
 }
 
-.logo-footer-container{
+.logo-footer{
   position: relative;
-  top: -90px;
+  z-index: 0;
+  width: 50%;
 }
 
 .bg-dark-custom{
@@ -106,26 +113,110 @@ header a.active, header a:hover {
 }
 
 .newsletter-and-socials{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .socials{
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social{
+  width: 32px;
 }
 
 .socials h2{
   color: #0282f9;
-  /* font-size: 20px;
-  font-weight: 700;
-  margin: 0; */
 }
 
 .signup-btn{
   font-size: 20px;
   border: 2px solid #0282f9;
   padding: 5px 10px;
+}
+
+/* media query */
+@media screen and (min-width: 330px){
+  .card-image{
+    height: 130px;
+  }
+}
+
+@media screen and (min-width: 400px){
+  .card-image{
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 430px){
+  .card-image{
+    height: 160px;
+  }
+
+  .logo-footer {
+    scale: 1.12;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .card-image{
+    height: 180px
+  }
+
+  .logo-footer{
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 512px) {
+  .card-image{
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 550px){
+  .card-image{
+    height: 220px;
+  }
+
+  .socials{
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card-image{
+    height: 200px;
+  }
+
+  .logo-footer{
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-image{
+    height: 160px;
+  }
+
+  .logo-footer{
+    width: 30%;
+    scale: 1.5;
+    right: 50px;
+  }
+}
+
+@media screen and (min-width: 1400px){
+  .card-image{
+    height: 180px;
+  }
+
+  .logo-footer{
+    width: 30%;
+    scale: 1.5;
+
+  }
 }
