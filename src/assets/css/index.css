@@ -36,7 +36,16 @@ ul {
 }
 
 header nav {
-  line-height: 80px;
+  line-height: 40px;
+  display:flex; 
+  flex-direction: column;
+  align-items:flex-start; 
+}
+
+.header-links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 header a {
@@ -185,6 +194,22 @@ header a:hover {
 }
 
 @media screen and (min-width: 512px) {
+  header nav {
+      line-height: 40px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  
+    .header-links {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 20px;
+    }
+
   .card-image {
     height: 200px;
   }
@@ -214,6 +239,17 @@ header a:hover {
 }
 
 @media screen and (min-width: 800px) {
+ 
+  header nav{
+    line-height: 80px;
+    gap: 30px;
+  }
+
+  .header-links{
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
   .card-image {
     height: 200px;
   }
